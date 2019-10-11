@@ -1,0 +1,167 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 26px;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.logo img {
+  width: 95px;
+  height: auto;
+}
+
+.centerNavItens {
+  margin: 0 0 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.centerNavItens ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerNavItens ul li {
+  list-style: none;
+  padding: 0 10px;
+}
+
+.centerNavItens ul li .a {
+  padding: 0.25rem 0.4rem;
+  position: relative;
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+.centerNavItens ul li:last-child .a {
+  background: var(--main-color);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 15px;
+}
+
+.centerNavItens ul .pages .a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: var(--main-color);
+  left: 0;
+  height: 4px;
+  transform: scaleX(0);
+  transition: all 0.3s;
+  border-radius: 4px;
+  bottom: 0;
+  transform-origin: right;
+}
+
+.centerNavItens ul .pages .a:hover {
+  color: var(--main-color);
+}
+
+.centerNavItens ul .pages .a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Mobile Nav Icon */
+.navBar .burger {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.navBar .burger div {
+  height: 3px;
+  margin: 2px;
+  background-color: var(--main-color);
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  margin-left: auto;
+}
+
+.navBar .burger div:nth-child(1) {
+  width: 22px;
+}
+.navBar .burger div:nth-child(2) {
+  width: 18px;
+}
+.navBar .burger div:nth-child(3) {
+  width: 22px;
+}
+
+.navBar .burger.open div {
+  width: 24px;
+  border-radius: 20px;
+}
+
+.navBar .burger.open div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.navBar .burger.open div:nth-child(2) {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.navBar .burger.open div:nth-child(3) {
+  transform: rotate(45deg) translate(-4px, -5px);
+}
+
+@media screen and (max-width: 1120px) {
+  body {
+    overflow-x: hidden;
+  }
+  .centerNavItens {
+    margin-top: 0;
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(250, 250, 250, 1);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    z-index: 9;
+    transition: transform 0.5s ease-in;
+  }
+
+  .centerNavItens ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+  }
+
+  .centerNavItens li{
+    opacity: 1;
+    margin: 22px 10px;
+    font-size: 25px;
+  }
+
+  .navBar .burger {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .centerNavItens.nav-active {
+    transform: translateX(0%);
+  }
+}

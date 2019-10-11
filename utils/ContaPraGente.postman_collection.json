@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "bc66193d-8dca-4e7e-a92f-7f5ac5019fdd",
+		"name": "ContaPraGente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Usuarios.Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"admin@email.com\",\n\t\"senha\" : \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Mural",
+			"item": [
+				{
+					"name": "Mural.Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTY2ZjgxMTEwMDNkMDFhNjc3OTZlOCIsImlhdCI6MTU3MDE5MjQ4NywiZXhwIjoxNTcwMTkyNzg3fQ.YgT_na_ztFKHxG_wudTA0V7Ujc47BGTqn6XbnZ0i93E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/itens",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"itens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mural.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTY2ZjgxMTEwMDNkMDFhNjc3OTZlOCIsImlhdCI6MTU3MDE0MDk5NiwiZXhwIjoxNTcwMTQxMjk2fQ.3twbtAZSna8woqMDC11tEFDGVwfK-4m-QHdYgi0lQgk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/itens/5d9671b511003d01a67796e9",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"itens",
+								"5d9671b511003d01a67796e9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mural.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTY2ZjgxMTEwMDNkMDFhNjc3OTZlOCIsImlhdCI6MTU3MDE5NDI1OCwiZXhwIjoxNTcwMTk0NTU4fQ.U20xK0VPxZv3s9esFBvR-D19gM66d7Bun_dO9xjf-7o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\": \"Item B\",\r\n    \"cor\": \"amarelo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/itens",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"itens"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "API.Informacoes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

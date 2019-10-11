@@ -1,0 +1,476 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: var(--main-color);
+    border-radius: 20px;
+    border: none;
+    margin-top: 15px;
+    opacity: .9;
+    cursor: pointer;
+    transition: all .5s
+}
+
+.btn .a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.cont {
+    min-width: 40%;
+}
+
+.pCont {
+    font-weight: bold;
+    font-size: 25px;
+    width: 75%;
+    word-break: normal;
+    color: #999;
+}
+
+/* ======= */
+
+.sec1{
+    width: 100%;
+    margin-bottom: 20vh; 
+    padding: 0 60px
+}
+
+.boxContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+}
+
+.slogan,
+.subSlogan,
+.chatbtn {
+    margin-right: auto;
+}
+
+.slogan {
+    margin: 0 auto 0 0;
+    font-weight: bold;
+    font-size: 55px;
+    color: #444;
+}
+
+.slogan span {
+    text-decoration: underline;
+}
+
+.subSlogan {
+    width: 75%;
+    font-weight: bold;
+    font-size: 30px;
+    color: #999;
+    word-break: normal;
+}
+
+.chatbtn {
+    margin-top: 20px;
+}
+
+.chatbtn .a {
+    position: relative;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 0 6px 0 0;
+    color: #444;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.chatbtn .a:hover {
+    color: var(--main-color);
+    transform-origin: right;
+}
+
+.chatbtn .a::after,
+.chatbtn .a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 4px;
+    transform: scaleX(0);
+    transition: all 0.3s;
+    border-radius: 4px;
+    bottom: 0;
+    transform-origin: left;
+}
+
+.chatbtn .a::after {
+    transition-delay: .3s;
+    background-color: var(--main-color);
+}
+
+.chatbtn .a:hover::after {
+    transform: scaleX(1);
+}
+
+.chatbtn .a::before {
+    background-color: #444;
+}
+
+.chatbtn .a:hover::before {
+    transform: scaleX(1);
+}
+
+.imageBox {
+    margin: 0 0 0 auto;
+}
+
+@media screen and (max-width: 1180px) {
+    .slogan {
+        font-size: 45px;
+    }
+
+    .subSlogan {
+        font-size: 28px;
+    }
+
+    .chatbtn .a {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+
+    .sec1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boxContent {
+        margin: 0;
+    }
+
+    .imageBox{
+        display: none;
+    }
+
+    .slogan {
+        margin: 0 0 0 0;
+        text-align: center;
+        font-size: 55px;
+    }
+
+    .subSlogan {
+        margin: 10px 0 0 0;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .chatbtn {
+        margin: 15px 0 0 0;
+    }
+
+    .chatbtn .a {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .sec1 {
+        padding: 0 40px
+    }
+
+    .slogan {
+        font-size: 45px;
+    }
+
+    .subSlogan {
+        font-size: 28px;
+    }
+
+    .chatbtn .a {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .slogan {
+        font-size: 40px;
+    }
+
+    .subSlogan {
+        width: 100%;
+        font-size: 26px;
+    }
+
+    .chatbtn .a {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slogan {
+        font-size: 38px;
+    }
+}
+
+/* ============== */
+
+.sec2,
+.sec4 {
+    padding: 0 60px;
+    height: 100vh;
+}
+
+@media screen and (max-width: 1120px) {
+    .sec2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 40px 0;
+    }
+
+    .sec2 .cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .sec2 .cont .pCont {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/* ====== */
+.sec3 {
+    padding: 0 60px;
+    height: 100vh;
+    justify-content: flex-end;
+}
+
+.sec3 .cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sec3 h2,
+.sec3 .pCont
+{
+    text-align: right;
+    margin-left: auto;
+}
+
+.sec3 .btn {
+    margin-left: auto;
+}
+
+@media screen and (max-width: 1120px) {
+    .sec3 {
+        display: flex;
+        flex-direction: column;
+        flex-flow: column-reverse;
+        align-items: center;
+        height: auto;
+        margin: 20vh 0;
+    }
+
+    .sec3 .mural .muralCont {
+        width: 100%;
+    }
+
+    .sec3 .mural .muralCont:last-child {
+        flex-flow: row-reverse;
+    }
+
+    .sec3 .mural .muralCont:last-child .phrase {
+        text-align: right;
+    }
+
+    .sec3 .cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .sec3 .cont h2 {
+        margin-left: 0;
+    }
+
+    .sec3 .cont .pCont {
+        margin: 0;
+        text-align: center;
+    }
+
+    .sec3 .cont .btn {
+        margin: 15px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .sec3 .mural .muralCont {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sec3 .mural .muralCont .phrase {
+        width: 100%;
+    }
+
+    .sec3 .mural .muralCont:last-child {
+        margin-top: 40px;
+        flex-flow: column;
+    }
+
+    .sec3 .mural .muralCont:last-child .phrase {
+        text-align: center;
+    }
+}
+
+/* ======= */
+.mural {
+    width: 80%;
+}
+
+.muralCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+@import 'https://fonts.googleapis.com/css?family=Reenie+Beanie';
+
+.postit {
+ line-height: 1;
+ text-align:center;     
+ width: 275px;    
+ margin: 25px;    
+ min-height:250px;
+ max-height:250px;
+ padding-top:10px;
+ position:relative;   
+ border:1px solid #E8E8E8; 
+ border-bottom-right-radius: 60px 5px;
+ display:flex;
+ justify-content: center;
+ align-items: center;    
+  background: #FFE052; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #FFE052 81%, #FFE052 82%, #FFE052 82%, #ffffc6 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#FFE052), color-stop(82%,#FFE052), color-stop(82%,#FFE052), color-stop(100%,#ffffc6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg, #FFE052 81%,#FFE052 82%,#FFE052 82%,#ffffc6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg, #FFE052 81%,#FFE052 82%,#FFE052 82%,#ffffc6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg, #FFE052 81%,#FFE052 82%,#FFE052 82%,#ffffc6 100%); /* IE10+ */
+background: linear-gradient(135deg, #FFE052 81%,#FFE052 82%,#FFE052 82%,#ffffc6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE052', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.postit:after {     
+  content: "";
+ position:absolute;
+ z-index:-1;
+ right:-0px; bottom:20px;
+ width:200px;
+ height: 25px;
+ background: rgba(0, 0, 0, 0.2);
+ box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
+-moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+-webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+     -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+        transform: matrix(-1, -0.1, 0, 1, 0, 0);
+        
+}
+
+.rotate {
+           /* Safari */
+           -webkit-transform: rotate(-10deg);
+           /* Firefox */
+           -moz-transform: rotate(-10deg);
+           /* IE */
+           -ms-transform: rotate(-10deg);
+           /* Opera */
+           -o-transform: rotate(-10deg);
+           /* Internet Explorer */
+           filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=1);
+       }
+
+.postit p {
+    font-family:'Reenie Beanie';    
+    font-size:3.5em; 
+    margin: auto 0;
+    font-weight: bold;
+}
+
+.phrase {
+    word-break: normal;
+    height: 100%;
+    width: 50%;
+    font-family:'Reenie Beanie'; 
+    font-size: 2.1rem;
+}
+
+@media screen and (max-width: 1120px) {
+    .sec4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 20vh 0;
+    }
+
+    .sec4 .cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .sec4 .cont .pCont {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/* ======= */
+.video {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video img{
+    width: 400px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 550px) {
+    .video img{
+        width: 320px;
+    }
+}
+
+/* ======= */
+
+
+
+
