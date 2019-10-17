@@ -10,6 +10,16 @@ exports.get = (req, res, next) => {
 	})
 }
 
+exports.getById = (req, res) => {   
+	usuarios
+	.findById(req.params.id)
+	.exec(function(err, usuario) {
+		if (err) return res.status(500).send(err);
+		if (usuario) return res.status(200).json(usuario);
+		return res.status(404).json({"mensagem":"usuario não encontrado."});
+	});
+}
+
 exports.post = async (req, res) => {
     usuarios.create(req.body, function (err, response) {
 		if (err) {
@@ -29,11 +39,10 @@ exports.postLogin = async (req, res) => {
           return res.status(error.code).send(error.message);
         }
     
-        token = jwt.sign({ id }, process.env.SECRET, {
+        token = jwt.sign({id}, process.env.SECRET, {
           expiresIn: 30000000000000
-        });
-    
-        res.send({ auth: true, token });
+		});
+        res.send({ auth: true, token, id });
       });
 	
 }
@@ -46,9 +55,9 @@ function authenticatesUser(authUser, cb) {
 	  },
 	  function(error, response) {
 		if (error) {
-		  return cb({ code: 500, message: "Usuário ou senha inválidos." });
+		  return cb({ code: 404, message: "Usuário ou senha inválidos." });
 		} else if (response === null) {
-		  return cb({ code: 500, message: "Usuário ou senha inválidos." });
+		  return cb({ code: 404, message: "Usuário ou senha inválidos." });
 		} else {
 		  return cb(null, response.id);
 		}

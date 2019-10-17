@@ -16,10 +16,11 @@ export default function App() {
             method: "POST",
             body: JSON.stringify({ email: email, password: password }),
             headers: {
+                //"x-access-token": event.token,
                 "Content-Type": "application/json"
             }
         })
-        .then(response => console.log(response.json()))
+        .then(response => response.json().then(function(result){localStorage.setItem("usuario-token",result.token);localStorage.setItem("id-user",result.id)}))
         .catch(error => console.log(error))
     }
 
@@ -42,7 +43,7 @@ export default function App() {
                         <label htmlFor="">Sua Senha</label>
                         <input className="txt" type="password" value={password}
                             onChange={atualizarPassword}/>
-                        <button onClick={login}>Logar</button>
+                        <button onClick={login} redirect="/itens">Logar</button>
                         <div className="utils">
                             <a href="#">Esqueceu a Senha?</a>
                         </div>

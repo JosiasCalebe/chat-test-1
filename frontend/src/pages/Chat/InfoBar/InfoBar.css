@@ -1,0 +1,28 @@
+.chat-infoBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    border-radius: 4px 4px 0 0;
+    height: 60px;
+    width: 100%;
+  }
+  
+  .chat-leftInnerContainer {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    color: var(--main-color-font);
+  }
+  
+  .chat-rightInnerContainer {
+    display: flex;
+    flex: 0.5;
+    justify-content: flex-end;
+    margin-right: 5%;
+  }
+  
+  .chat-onlineIcon {
+    margin-right: 5%;
+  }

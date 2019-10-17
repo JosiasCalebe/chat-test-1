@@ -1,0 +1,103 @@
+.chat-messageBox {
+    background: #F3F3F3;
+    padding: 0px 20px;
+    color: white;
+    display: inline-block;
+    max-width: 80%;
+    border-radius: 15px;
+  }
+  
+  .chat-messageText {
+    width: 100%;
+    letter-spacing: 0;
+    float: left;
+    
+    font-size: 0.9em;
+    word-wrap: break-word;
+  }
+
+  .chat-currentUser {
+    text-align: right;
+  }
+
+  .chat-outsideUser {
+    text-align: left;
+  }
+  
+  .chat-messageText img {
+    vertical-align: middle;
+  }
+
+  
+  .chat-messageContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5%;
+    margin-top: 2px;
+  }
+
+  .chat-firstMessageContainer {
+    margin-top: 10px;
+  }
+
+  .chat-time {
+    margin-top: auto;
+  }
+
+  
+  .chat-sentText {
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 0.7em;
+    letter-spacing: 0.3px;
+  }
+
+  .chat-mt-10 {
+    margin-bottom: -10px; 
+  }
+  
+  .chat-pl-10 {
+    padding-left: 10px;
+    float:right;
+  }
+  
+  .chat-pr-10 {
+    padding-right: 10px;
+  }
+  
+  .chat-justifyStart {
+    justify-content: flex-start;
+  }
+  
+  .chat-justifyEnd {
+    justify-content: flex-end;
+  }
+  
+  .chat-justifyCenter {
+    justify-content: center;
+  }
+
+  .chat-colorWhite {
+    color: var(--main-color-font);
+  }
+
+  .chat-colorDarkGray {
+    color: #5c5c5c;
+  }
+
+  .chat-colorLightGray {
+    color: var(--main-color-font);
+  }
+  
+  .chat-colorDark {
+    color: #353535;
+  }
+  
+  .chat-backgroundBlue {
+    background: var(--main-color);
+  }
+  
+  .chat-backgroundLight {
+    background: rgb(218, 216, 216);
+  }
